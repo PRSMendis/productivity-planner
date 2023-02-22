@@ -57,3 +57,6 @@ const Button: FC<ButtonProps> = ({children, intent, size, className}) => {
     )
 
 }
+
+
+export default Button;
