@@ -4,15 +4,16 @@ import Button from "./Button";
 import Card from "./Card";
 import Input from "./Input";
 import { register, signin} from "@/lib/api";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
+import Link from "next/link";
 
 const registerContent = {
     linkUrl: '/signin',
     linkText: 'Already have an account?',
     header: 'Create a new Account',
     subheader: 'Just a few thigns to get started',
-    butonText: 'Register'
+    buttonText: 'Register'
 }
 
 const signinContent = {
@@ -20,7 +21,7 @@ const signinContent = {
     linkText: "Don't have an account?",
     header: 'Welcome Back',
     subheader: 'Enter yoru credentials to access your account',
-    butonText: 'Sign in'
+    buttonText: 'Sign in'
 }
 
 const initial = { email: "", password: "", firstName: "", lastName: "" };
@@ -32,7 +33,7 @@ export default function AuthForm({ mode }: { mode: "register" | "signin" }) {
         e.preventDefault();
 
         try {
-            if (mode=== 'register'{
+            if (mode=== 'register'){
                 await register(formState)
             } else {
                 await signin(formState)
