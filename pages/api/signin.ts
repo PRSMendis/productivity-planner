@@ -33,6 +33,3 @@ export default async function signin(req: NextApiRequest, res: NextApiResponse) 
           res.end();
         }
     }
-
-    
-}
