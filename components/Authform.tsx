@@ -40,7 +40,7 @@ export default function AuthForm({ mode }: { mode: "register" | "signin" }) {
             }
             
         } catch (error) {
-            throw new Error("FORM ERROR");
+            throw new Error(`FORM ERROR: ${error}`);
         }
 
         setFormState(initial)

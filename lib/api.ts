@@ -10,6 +10,7 @@ export const fetcher = async ({url, method, body, json = true}) => {
     })
 
     if(!res.ok) {
+        console.log('res: ', res);
         throw new Error("API ERROR");
     }
 
