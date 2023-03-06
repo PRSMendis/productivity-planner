@@ -1,3 +1,4 @@
+import Greetings from "@/components/Greetings";
 import { delay } from "@/lib/async"
 import { getUserFromCookie } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -12,6 +13,7 @@ export default async function Page() {
         <div className="flex-1 grow flex">{/** greetings here */}</div>
         <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 ">
           {/** projects map here */}
+          <Greetings/>
           <div className="w-1/3 p-3">{/* new project here */}</div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
