@@ -10,6 +10,7 @@ import { Suspense } from "react";
 const getData = async () => {
   // await delay(1000);
   const user = await getUserFromCookie(cookies());
+  console.log('user: ', user);
   const projects = await db.project.findMany({
     where: {
       ownerId: user?.id,
