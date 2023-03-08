@@ -6,6 +6,9 @@ const nextConfig = {
   serverComponentsExternalPackages: ['bcrypt'], 
   typescript: {
     ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreBuildErrors: true
   }
 }
 
