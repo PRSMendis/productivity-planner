@@ -44,7 +44,7 @@ const TaskCard = async({tasks, title}) => {
             {data && data.length ? (
               <div>
                 {data.map((task) => (
-                  <div className="py-2 ">
+                  <div key = {task} className="py-2 ">
                     <div>
                       <span className="text-gray-800">{task.name}</span>
                     </div>
