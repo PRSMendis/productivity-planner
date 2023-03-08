@@ -11,7 +11,6 @@ const NewProject = () => {
     const [isModalOpen, setIsOpen] = useState(false)
     const closeModal = () => setIsOpen(false);
     const openModal = () => {
-      console.log('true: ', true);
       setIsOpen(true);
     }
     const [name, setName] = useState("");
@@ -22,8 +21,6 @@ const NewProject = () => {
         await createNewProject(name)
         closeModal()
     }
-    // return (<Button onClick={() => console.log('test')}>+ test</Button>)
-    // return (<button onClick={() => console.log('test')}>+ test2</button>)
 
     return (
         <div className="px-6 py-8 hover:scale-105 transition-all ease-in-out duration-200 flex justify-center items-center">
