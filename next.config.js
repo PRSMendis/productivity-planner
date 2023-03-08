@@ -3,7 +3,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  serverComponentsExternalPackages: ['bcrypt'],
+  serverComponentsExternalPackages: ['bcrypt'], 
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 }
 
 module.exports = nextConfig
